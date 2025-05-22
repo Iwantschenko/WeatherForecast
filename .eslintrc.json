@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@mate-academy/eslint-config-react-typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
