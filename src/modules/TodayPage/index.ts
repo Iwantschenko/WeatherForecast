@@ -1,1 +1,1 @@
-export * from './TodayPage';
+export * from './DetailsWeatherForecastPage';

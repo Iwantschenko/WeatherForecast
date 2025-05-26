@@ -1,0 +1,13 @@
+iframe {
+  display: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main{
+  @include content-padding-in-line;
+}

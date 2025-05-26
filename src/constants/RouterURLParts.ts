@@ -1,4 +1,4 @@
 export const RouterURlParts = {
   Root: '/',
-  Home: 'home',
+  Home: '/home',
 } as const;
