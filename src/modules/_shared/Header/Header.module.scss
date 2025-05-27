@@ -25,7 +25,7 @@
   }
 
   &Rigth {
-      flex: 2 1 auto;
+    flex: 2 1 auto;
   }
 
   &Logo {
@@ -73,7 +73,7 @@
     text-transform: uppercase;
     transition: color 0.3s ease;
     height: 48px;
-    
+
     @include on-desktop {
       height: 64px;
     }
@@ -82,8 +82,8 @@
       color: $color-text-main;
     }
     &:last-child {
-    margin-right: 20px;
-  }
+      margin-right: 20px;
+    }
   }
 }
 
@@ -100,5 +100,4 @@
     bottom: 0;
     background: $color-text-main;
   }
-  
 }

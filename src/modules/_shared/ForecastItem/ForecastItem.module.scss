@@ -1,0 +1,53 @@
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ForecastItem {
+  padding: 15px;
+  box-sizing: border-box;
+
+  color: $color-text-main;
+  background-color: $color-card;
+  text-align: center;
+  border: 1px solid $color-card;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDownFade 0.5s ease forwards;
+  
+  &:hover {
+    border-color: $color-text-main;
+  }
+
+  &Secondary {
+    color: $color-text-secondary;
+  }
+
+  &Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &Icon {
+    @include img-hover-scale(1.1);
+  }
+
+  &Info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 5px;
+  }
+}
