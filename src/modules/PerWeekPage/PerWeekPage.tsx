@@ -5,7 +5,7 @@ import type { Forecast } from '@models/Forecast';
 import { buildForecastFromApiJson } from '@utils/BuildForecastShortFromApi';
 
 export const PerWeekPage = () => {
-  const [list, setList] = useState<Forecast>();
+  const [forecasts, setForecasts] = useState<Forecast>();
 
   useEffect(() => {
     fetch(
@@ -13,15 +13,15 @@ export const PerWeekPage = () => {
     )
       .then(res => res.json())
       .then(data => {
-        const converted = buildForecastFromApiJson(data);
+        const convert = buildForecastFromApiJson(data);
 
-        setList(converted);
+        setForecasts(convert);
       });
   }, []);
 
   return (
     <div className={style.container}>
-      <ForecastList dailyForecastData={list?.weatherForecast ?? []} />
+      <ForecastList dailyForecastData={forecasts?.weatherForecast ?? []} />
     </div>
   );
 };

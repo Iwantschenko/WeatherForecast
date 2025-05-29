@@ -10,7 +10,7 @@ export const Root = () => (
     <Routes>
       <Route path={RouterURlParts.Root} element={<App />}>
         <Route index element={<PerWeekPage />} />
-        <Route path=":Id" element={<DetailsWeatherForecastPage />} />
+        <Route path=":date" element={<DetailsWeatherForecastPage />} />
         <Route
           path={RouterURlParts.Home}
           element={<Navigate to={RouterURlParts.Root} replace={true} />}

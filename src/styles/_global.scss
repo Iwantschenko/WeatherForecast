@@ -1,17 +1,17 @@
 html {
   font-family: 'Mont', sans-serif;
   scroll-behavior: smooth;
-  background-color: $color-bg;
+  background-color: var(--color-bg);
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0;
-  color: $color-text-main;
+  color: var(--color-text-main);
 }
 
 button {
-  background-color: $color-bg;
-  color: $color-text-main;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
 }
 
 h1 {

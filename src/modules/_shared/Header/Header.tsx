@@ -3,10 +3,15 @@ import cn from 'classnames';
 import logo from '@assets/img/logo.png';
 import { NavLink } from 'react-router-dom';
 import { RouterURlParts } from '@constants/RouterURLParts';
+import { ThemeSwitcher } from '../ThemeSwitcher';
 
 export const Header = () => {
   const isActivenavLink = ({ isActive }: { isActive: boolean }) =>
     cn(styles.navLink, { [styles.isActive]: isActive });
+
+  const getTodayDate = (): string => {
+    return new Date().toISOString().split('T')[0];
+  };
 
   return (
     <header className={cn(styles.header, 'uppercase')}>
@@ -26,7 +31,10 @@ export const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <NavLink className={isActivenavLink} to={'./hereDateId'}>
+              <ThemeSwitcher />
+            </li>
+            <li className={styles.navItem}>
+              <NavLink className={isActivenavLink} to={`./${getTodayDate()}`}>
                 Today
               </NavLink>
             </li>

@@ -1,3 +1,59 @@
-.test {
-  background-color: aqua;
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Container {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.ForecastItem {
+  padding: 20px;
+  background-color: var(--color-card);
+  border-radius: 12px;
+  border: 1px solid var(--color-element);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDownFade 0.5s ease forwards;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.ForecastItemTitle {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.ForecastItemSecondary {
+  color: var(--color-text-secondary);
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.ForecastItemLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.ForecastItemIcon {
+  width: 80px;
+  height: 80px;
+}
+
+.ForecastItemInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
