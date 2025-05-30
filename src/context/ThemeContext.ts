@@ -1,4 +1,3 @@
-
 import type { ThemeType } from '@models/ThemeType';
 import { createContext } from 'react';
 
